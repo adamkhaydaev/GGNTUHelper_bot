@@ -30,7 +30,7 @@ async def _get_access_token() -> str:
 
     data = {"scope": "GIGACHAT_API_PERS"}
 
-    async with httpx.AsyncClient(verify=False, timeout=30) as client:
+    async with httpx.AsyncClient(timeout=30) as client:
         response = await client.post(
             GIGACHAT_AUTH_URL,
             headers=headers,
@@ -78,7 +78,7 @@ async def ask_llm(question: str, context: str = "") -> str:
         "max_tokens": 1000,
     }
 
-    async with httpx.AsyncClient(verify=False, timeout=60) as client:
+    async with httpx.AsyncClient(timeout=30) as client:
         response = await client.post(
             GIGACHAT_API_URL,
             headers=headers,
