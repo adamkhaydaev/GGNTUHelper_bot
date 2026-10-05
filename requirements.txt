@@ -1,0 +1,15 @@
+# Telegram bot
+aiogram==3.13.1
+
+# Database
+SQLAlchemy==2.0.35
+asyncpg==0.29.0
+alembic==1.13.3
+
+# Config
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+
+# Utils
+loguru==0.7.2
